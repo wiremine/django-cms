@@ -30,7 +30,7 @@ class Mptt(models.Model):
         abstract = True
 
 
-class MpttMeta:
+class MpttMeta(object):
     """Basic mptt configuration class - something like Meta in model
     """
     
