@@ -742,3 +742,21 @@ class ShowSubMenuCheck(BaseMenuTest):
         nodes = context['children']
         self.assertEqual(len(nodes), 1)
         self.assertEqual(nodes[0].id, 8)
+        
+class MenuBreakCheck(BaseMenuTest):
+    fixtures = ['menus-sub.json']
+    
+    def test_01_check_for_break(self):
+        context = self.get_context('/')
+        tpl = Template("{% load menu_tags %}{% show_sub_menu %}")
+        tpl.render(context)
+        print context
+        #nodes = context['children']
+        #print nodes
+        
+        
+        
+        
+        
+        
+        

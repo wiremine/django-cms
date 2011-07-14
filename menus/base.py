@@ -32,7 +32,7 @@ class NavigationNode(object):
     parent = None # do not touch
     visible = True
     
-    def __init__(self, title, url, id, parent_id=None, parent_namespace=None, attr=None, visible=True):
+    def __init__(self, title, url, id, parent_id=None, parent_namespace=None, attr=None, visible=True, break_in_navigation=False):
         self.children = [] # do not touch
         self.title = title
         self.url = self._remove_current_root(url)
@@ -40,6 +40,7 @@ class NavigationNode(object):
         self.parent_id = parent_id
         self.parent_namespace = parent_namespace
         self.visible = visible
+        self.break_in_navigation = break_in_navigation
         if attr:
             self.attr = attr
             

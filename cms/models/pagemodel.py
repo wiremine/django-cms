@@ -90,6 +90,8 @@ class Page(Mptt):
     publisher_public = models.OneToOneField('self', related_name='publisher_draft',  null=True, editable=False)
     publisher_state = models.SmallIntegerField(default=0, editable=False, db_index=True)
     
+    break_in_navigation = models.BooleanField("Create break in navigation after this item", default=False)
+    
     # Managers
     objects = PageManager()
     permissions = PagePermissionsPermissionManager()

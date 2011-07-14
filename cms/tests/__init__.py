@@ -6,7 +6,7 @@ from cms.tests.forms import FormsTestCase
 from cms.tests.mail import MailTestCase
 from cms.tests.middleware import MiddlewareTestCase
 from cms.tests.multilingual import MultilingualTestCase
-from cms.tests.menu import FixturesMenuTests, MenuTests, AdvancedSoftrootTests, ShowSubMenuCheck
+from cms.tests.menu import FixturesMenuTests, MenuTests, AdvancedSoftrootTests, ShowSubMenuCheck, MenuBreakCheck
 from cms.tests.navextender import NavExtenderTestCase
 from cms.tests.nonroot import NonRootCase
 from cms.tests.page import PagesTestCase, NoAdminPageTests

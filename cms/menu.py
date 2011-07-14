@@ -18,7 +18,7 @@ def page_to_node(page, home, cut):
     #    parent_id = None # ????
     attr = {'soft_root':page.soft_root,
             'auth_required':page.login_required,
-            'reverse_id':page.reverse_id,}
+            'reverse_id':page.reverse_id}
     if page.limit_visibility_in_menu == None:
         attr['visible_for_authenticated'] = True
         attr['visible_for_anonymous'] = True
@@ -48,6 +48,7 @@ def page_to_node(page, home, cut):
         parent_id, 
         attr=attr,
         visible=page.in_navigation,
+        break_in_navigation=page.break_in_navigation
     )
     return ret_node
 
